@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "9d34d63d-0e85-4bd0-8452-7873c5c6d2b3",
+		"name": "测试集1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24048996"
+	},
+	"item": [
+		{
+			"name": "1不含参数请求",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.environment.get(\"variable_key\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ceshiren.com/",
+					"protocol": "https",
+					"host": [
+						"ceshiren",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2含参数的请求",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://httpbin.ceshiren.com/get?key1=value1",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"ceshiren",
+						"com"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "key1",
+							"value": "value1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3含参数的post请求",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://httpbin.ceshiren.com/post?post_key1=post_value1&post_key2=post_value2",
+					"protocol": "https",
+					"host": [
+						"httpbin",
+						"ceshiren",
+						"com"
+					],
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "post_key1",
+							"value": "post_value1"
+						},
+						{
+							"key": "post_key2",
+							"value": "post_value2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
